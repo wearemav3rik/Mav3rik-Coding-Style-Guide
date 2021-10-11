@@ -4,7 +4,7 @@
 - Variable Naming
 - Trigger Handler Interface
 - Trigger Pattern
-- Query Builder Pattern
+- Query Builder Interface
 - Apex Security Pattern
 - Writing Tests
 - Accessing Record Types
