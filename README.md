@@ -6,7 +6,7 @@ This style guide is the coding standards for the developers of Mav3rik.
 ## Table of Contents
 - Apex
   - [Tabs or Spaces](APEX/01-TAB-OR-SPACES.md)
-  - [Variable Naming](APEX/02-VARIABLE-NAMING.md)
+  - [Naming Convention](APEX/02-NAMING-CONVENTION.md)
   - [Trigger Handler Interface](APEX/03-TRIGGER-HANDLER-INTERFACE.md)
   - [Trigger Pattern](APEX/04-TRIGGER-PATTERN.md)
   - [Query Builder Interface](APEX/05-QUERY-BUILDER-INTERFACE.md)
