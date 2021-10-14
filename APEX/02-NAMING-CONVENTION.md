@@ -7,6 +7,7 @@
 
 ```
 Examples:
+
 AccountController
 AccountControllerTest
 TestDataFactory
@@ -22,6 +23,7 @@ ContactUpdateBatch
 
 ```
 Examples:
+
 getAllAccounts
 findAllAccountsWithActivities
 ```
@@ -34,6 +36,7 @@ findAllAccountsWithActivities
 3. Special characters should be avoided such as Dash `-` or Underscore `_`.
 ```
 Examples:
+
 String accountName = 'Lorem Ipsum';
 Integer numberWhichWillBeIncremented = 1;
 Boolean isActivated = true;
@@ -46,6 +49,7 @@ Boolean isActivated = true;
 2. It should also be `All Upper Case` characters.
 ```
 Examples:
+
 final String PAGE_LONG_DESCRIPTION = 'Lorem Ipsum';
 final Integer BATCH_LIMIT = 50;
 final Boolean ENABLE_LOG_EXCEPTION = true;
