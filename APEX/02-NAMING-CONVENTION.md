@@ -13,6 +13,8 @@ Examples:
 - ContactUpdateBatch
 ```
 
+<br>
+
 ## Class Methods
 1. Naming our classes should be in `Camel Case`.
 2. It should also begin with an `Lower Case` character.
@@ -23,6 +25,8 @@ Examples:
 - getAllAccounts
 - findAllAccountsWithActivities
 ```
+
+<br>
 
 ## Mutable Variables (Non-Final)
 1. Naming our final variables should be in `Camel Case`.
@@ -35,6 +39,7 @@ Examples:
 - Boolean isActivated = true;
 ```
 
+<br>
 
 ## Immutable Variables (Final)
 1. Naming our non-final variables should be in `Snake Case`.
