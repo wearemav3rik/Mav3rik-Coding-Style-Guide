@@ -1,6 +1,9 @@
 # Trigger Pattern
 
 
+## Naming Convention
+If the Object is called `Example`, we will use the class name `ExampleTrigger`.
+
 ## ExampleTrigger
 ```java
 trigger ExampleTrigger on Example__c (
