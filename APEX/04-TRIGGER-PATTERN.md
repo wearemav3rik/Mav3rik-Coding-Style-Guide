@@ -1,9 +1,7 @@
 # Trigger Pattern
 
 
-## Custom Metadata Toggle On/Off
-
-## Style
+## ExampleTrigger
 ```java
 trigger ExampleTrigger on Example__c (
     before insert,
@@ -18,3 +16,8 @@ trigger ExampleTrigger on Example__c (
 
 }
 ```
+
+<br>
+
+## Custom Metadata Toggle On/Off
+Example TBD by Raj
