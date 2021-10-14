@@ -1,4 +1,7 @@
 # Tabs or Spaces
+Tabs or Spaces have always been the question among developers. The answer to the question is to use `spaces`, 2 spaces to be particular. Ideally, we want to configure our tab keybinding to create `2 spaces`.
+
+<br>
 
 ## Apex PMD
 The team should be using `Apex PMD` to format the code on each Apex class.
