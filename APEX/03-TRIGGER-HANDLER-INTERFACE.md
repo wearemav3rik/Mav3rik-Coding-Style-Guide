@@ -11,7 +11,7 @@ If the Object is called `Example`, we will use the class name `ExampleTriggerHan
 
 <br>
 
-## Style
+## An example trigger handler: ExampleTriggerHandler
 ```java
 public with sharing class ExampleTriggerHandler extends TriggerHandler {
 
@@ -33,6 +33,8 @@ public with sharing class ExampleTriggerHandler extends TriggerHandler {
 }
 ```
 
+<br>
+
 ## Accessing the Lists
 e.g. Accounts
 ```java
@@ -46,6 +48,8 @@ public static void yourMethod() {
 	}
 }
 ```
+
+<br>
 
 ## Accessing Maps
 e.g. Accounts
