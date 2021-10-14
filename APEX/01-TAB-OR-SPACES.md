@@ -3,7 +3,7 @@
 ## Apex PMD
 The team should be using `Apex PMD` to format the code on each Apex class.
 
-Apex PMD uses `4 spaces` for `1 tab` in its configuration.
+Apex PMD uses `2 spaces` for `1 tab` in its configuration.
 
 
 ### VS Code
