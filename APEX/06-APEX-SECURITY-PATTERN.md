@@ -10,6 +10,8 @@ By default, apex doesn't enforce object or field-level permissions. Salesforce o
 
 Reference URL: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_security_sharing_chapter.htm
 
+<br>
+
 ### WITH SECURITY_ENFORCED
 
 The first option to verify object and field permission is **WITH SECURITY_ENFORCED** keyword on SOQL query. This will raise an exception if SOQL tries to access something that's not accessible to the user.
@@ -23,6 +25,8 @@ Example:
 ```java
 List<Account> act1 = [SELECT Id, (SELECT LastName FROM Contacts) FROM Account WHERE Name like 'Acme' WITH SECURITY_ENFORCED]
 ```
+
+<br>
 
 ### Schema.DescribeSObjectResult and Schema.DescribeFieldResult
 
@@ -56,6 +60,8 @@ The following example verifies if the user has update access to specific objects
     return true;
 }
 ```
+
+<br>
 
 ### Security.stripInaccessible
 
