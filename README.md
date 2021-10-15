@@ -1,7 +1,13 @@
-# Mav3rik Coding Style Guide
-
-This style guide is the coding standards for the developers of Mav3rik.
-
+<div style="text-align:center;">
+  <img src="https://mav3rik.com/wp-content/uploads/2021/07/mav3rik-home.svg" alt="Mav3rik Coding Style Guide" height="200"/>
+  <h1>
+  Coding Style Guide
+  </h1>
+  <span>
+  This style guide is the coding standards for the developers of Mav3rik.
+  </span>
+</div>
+<br>
 
 ## Table of Contents
 - Apex
