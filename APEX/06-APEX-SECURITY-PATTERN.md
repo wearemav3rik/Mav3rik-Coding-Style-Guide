@@ -10,8 +10,7 @@ By default, apex doesn't enforce object or field-level permissions. Salesforce o
 
 Reference URL: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_security_sharing_chapter.htm
 
-###
-1. WITH SECURITY_ENFORCED
+### WITH SECURITY_ENFORCED
 
 The first option to verify object and field permission is **WITH SECURITY_ENFORCED** keyword on SOQL query. This will raise an exception if SOQL tries to access something that's not accessible to the user.
 
@@ -25,9 +24,7 @@ Example:
 List<Account> act1 = [SELECT Id, (SELECT LastName FROM Contacts) FROM Account WHERE Name like 'Acme' WITH SECURITY_ENFORCED]
 ```
 
-###
-
-2. Schema.DescribeSObjectResult and Schema.DescribeFieldResult
+### Schema.DescribeSObjectResult and Schema.DescribeFieldResult
 
 This method is the oldest of all and verifies permissions using DescribeSObjectResult and DescribeFieldResult.
 Before performing any DML operation, call any of these methods isAccessible, isCreateable, or isUpdateable to verify if the user has required access.
@@ -37,7 +34,7 @@ Example:
 
 The following example verifies if the user has update access to specific objects and fields.
 
-##
+### Style
 ```java
  public static Boolean hasUpdateAccess(String sObjectName, Set<String> sFields){
     if(Schema.sObjectType.Case.isUpdateable()){
@@ -59,16 +56,14 @@ The following example verifies if the user has update access to specific objects
     return true;
 }
 ```
-###
 
-3. Security.stripInaccessible
+### Security.stripInaccessible
 
 This option was recently introduced by Salesforce to verify user permission.
 
 This method can be used to strip the fields and relationship fields from query and subquery results that the user can’t access.
 All inaccessible objects and fields will be removed before DML operations.
 Salesforce recommends using this method to verify user access.
-
 
 - Class: Security.stripInaccessible
 - Supported Access Types:
@@ -77,7 +72,6 @@ Salesforce recommends using this method to verify user access.
   - UPDATABLE
   - UPSERTABLE
 
-##
 ```java
 public static void updateWithStripInaccessible(List<Account> accountsList){
     try{
