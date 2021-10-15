@@ -23,7 +23,12 @@ The first option to verify object and field permission is **WITH SECURITY_ENFORC
 Example:
 ##
 ```java
-List<Account> act1 = [SELECT Id, (SELECT LastName FROM Contacts) FROM Account WHERE Name like 'Acme' WITH SECURITY_ENFORCED]
+List<Account> act1 = [
+  SELECT Id, (SELECT LastName FROM Contacts)
+  FROM Account
+  WHERE Name like 'Acme'
+  WITH SECURITY_ENFORCED
+];
 ```
 
 <br>
