@@ -1,12 +1,40 @@
 # Apex Security Pattern
 
+## Enforcing Row Level Security
+To enforce row level security on objects within Apex classes, we need to query them inside the scope of an Apex class. Row level security should always be enforced on an apex class.
+
+### Wrong
+```java
+// This is wrong as row level security is not enforced
+public class ExampleClass {
+}
+```
+
+### With Sharing Rules
+```java
+// The running user will have access to Contacts which he has access to (by ownership/sharing)
+public with sharing class ExampleClass {
+    List<Contact> contacts = [SELECT Id, Name FROM Contact];
+}
+```
+
+### Without Sharing Rules
+```java
+// The running user will have access every Contacts regardless of ownership/sharing access
+public without sharing class ExampleClass {
+    List<Contact> contacts = [SELECT Id, Name FROM Contact];
+}
+```
+
+<br>
+
 ## Enforcing Object and Field Permissions
 
-By default, apex doesn't enforce object or field-level permissions. Salesforce offers 3 different ways to verify access and how to ensure your user will not see, what he's not supposed to see.
+By default, apex doesn't enforce object or field-level permissions. Salesforce offers 3 different ways to verify access and how to ensure your Apex security requirements are met.
 
-1. **WITH SECURITY_ENFORCED** clause on SOQL queries
-2. **DescribeFieldResult** class and its method isAccessible
-3. **Security** class and its method **stripInaccessible**
+1. **WITH SECURITY_ENFORCED** - provides security as a clause on SOQL queries.
+2. **DescribeFieldResult** - provides the  `isAccessible`, `isCreateable`, or `isUpdateable` methods.
+3. **Security** - provides the `stripInaccessible` method.
 
 Reference URL: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_security_sharing_chapter.htm
 
@@ -35,9 +63,8 @@ List<Account> act1 = [
 
 ### Schema.DescribeSObjectResult and Schema.DescribeFieldResult
 
-This method is the oldest of all and verifies permissions using DescribeSObjectResult and DescribeFieldResult.
-Before performing any DML operation, call any of these methods isAccessible, isCreateable, or isUpdateable to verify if the user has required access.
-This option is CPU intensive.
+This method verifies permissions using DescribeSObjectResult and DescribeFieldResult.
+Before performing any DML operation, call any of these methods `isAccessible`, `isCreateable`, or `isUpdateable` to verify if the user has required access. This option is CPU intensive.
 
 Example:
 
@@ -72,16 +99,15 @@ The following example verifies if the user has update access to specific objects
 
 This option was recently introduced by Salesforce to verify user permission.
 
-This method can be used to strip the fields and relationship fields from query and subquery results that the user can’t access.
-All inaccessible objects and fields will be removed before DML operations.
+This method can be used to strip the fields and relationship fields from query and subquery results which the user does not have access to. All inaccessible objects and fields will be removed before DML operations.
 Salesforce recommends using this method to verify user access.
 
 - Class: Security.stripInaccessible
 - Supported Access Types:
-  - CREATABLE
-  - READABLE
-  - UPDATABLE
-  - UPSERTABLE
+  - `CREATABLE`
+  - `READABLE`
+  - `UPDATABLE`
+  - `UPSERTABLE`
 
 ```java
 public static void updateWithStripInaccessible(List<Account> accountsList){
