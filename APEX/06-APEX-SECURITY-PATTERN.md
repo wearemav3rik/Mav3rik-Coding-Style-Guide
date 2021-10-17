@@ -3,6 +3,8 @@
 ## Enforcing Row Level Security
 To enforce row level security on objects within Apex classes, we need to query Objects inside the scope of an Apex class. Row level security should always be enforced on an apex class.
 
+Apex classes without queries do not need row level security.
+
 ### Wrong
 ```java
 // This does not enforce row level security
