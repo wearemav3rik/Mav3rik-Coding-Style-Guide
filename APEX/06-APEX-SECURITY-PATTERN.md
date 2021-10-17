@@ -1,12 +1,15 @@
 # Apex Security Pattern
 
 ## Enforcing Row Level Security
-To enforce row level security on objects within Apex classes, we need to query them inside the scope of an Apex class. Row level security should always be enforced on an apex class.
+To enforce row level security on objects within Apex classes, we need to query Objects inside the scope of an Apex class. Row level security should always be enforced on an apex class.
 
 ### Wrong
 ```java
-// This is wrong as row level security is not enforced
+// This does not enforce row level security
 public class ExampleClass {
+    public static void queryContacts() {
+        List<Contact> contacts = [SELECT Id, Name FROM Contact];
+    }
 }
 ```
 
@@ -14,7 +17,9 @@ public class ExampleClass {
 ```java
 // The running user will have access to Contacts which he has access to (by ownership/sharing)
 public with sharing class ExampleClass {
-    List<Contact> contacts = [SELECT Id, Name FROM Contact];
+    public static void queryContacts() {
+        List<Contact> contacts = [SELECT Id, Name FROM Contact];
+    }
 }
 ```
 
@@ -22,7 +27,20 @@ public with sharing class ExampleClass {
 ```java
 // The running user will have access every Contacts regardless of ownership/sharing access
 public without sharing class ExampleClass {
-    List<Contact> contacts = [SELECT Id, Name FROM Contact];
+    public static void queryContacts() {
+        List<Contact> contacts = [SELECT Id, Name FROM Contact];
+    }
+}
+```
+
+### This is Ok
+```java
+// This does not enforce row level security but it is just a utility class
+// and there are no queries in this class
+public class ExampleClassWithoutQueries {
+    public Integer void doubleTheValue(Integer x) {
+        return x + x;
+    }
 }
 ```
 
