@@ -5,9 +5,10 @@ Writing tests should be a collaborative process between the Developer and the Co
 <br>
 
 ## Basic Test Patterns
-We want to be testing for `Positive`, `Negative`, `Null` and `Empty` scenarios as much as they are applicable to the use case.
+We want to be testing for `Positive`, `Negative`, `Null` and `Empty` scenarios as much as possible.
 For the purpose of this example, let's say the method I am testing is:
 ```java
+// The method I am testing
 public class Chores {
   public static Boolean doDishes(List<String> thingsImBusyWith) {
     if (thingsImBusyWith == null) {
