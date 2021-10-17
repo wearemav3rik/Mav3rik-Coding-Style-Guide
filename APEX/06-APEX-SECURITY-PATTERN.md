@@ -49,7 +49,6 @@ The first option to verify object and field permission is **WITH SECURITY_ENFORC
   - And, before ORDER BY, LIMIT, OFFSET or any aggregate function.
 
 Example:
-##
 ```java
 List<Account> act1 = [
   SELECT Id, (SELECT LastName FROM Contacts)
@@ -67,12 +66,9 @@ This method verifies permissions using DescribeSObjectResult and DescribeFieldRe
 Before performing any DML operation, call any of these methods `isAccessible`, `isCreateable`, or `isUpdateable` to verify if the user has required access. This option is CPU intensive.
 
 Example:
-
-The following example verifies if the user has update access to specific objects and fields.
-
-### Style
 ```java
- public static Boolean hasUpdateAccess(String sObjectName, Set<String> sFields){
+// The following example verifies if the user has update access to specific objects and fields.
+public static Boolean hasUpdateAccess(String sObjectName, Set<String> sFields){
     if(Schema.sObjectType.Case.isUpdateable()){
         return hasFieldUpdateAccess(sObjectName, sFields);
     }
@@ -81,7 +77,7 @@ The following example verifies if the user has update access to specific objects
     }
 }
 
- public static Boolean hasFieldUpdateAccess(String sObjectName, Set<String> sFields){
+public static Boolean hasFieldUpdateAccess(String sObjectName, Set<String> sFields){
     Schema.SObjectType obj = Schema.getGlobalDescribe().get(sObjectName);
     for(String field: sFields){
         Schema.SObjectField sObjectField = obj.getDescribe().Fields.getMap().get(field);
@@ -109,6 +105,7 @@ Salesforce recommends using this method to verify user access.
   - `UPDATABLE`
   - `UPSERTABLE`
 
+Example:
 ```java
 public static void updateWithStripInaccessible(List<Account> accountsList){
     try{
