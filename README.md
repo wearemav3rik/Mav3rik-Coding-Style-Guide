@@ -24,7 +24,7 @@
 - JavaScript
   - Tabs or Spaces
   - Naming Convention
-  - Use of var, let or cont
+  - Use of var, let or const
   - Optional Chaining
   - Exception Handling
 

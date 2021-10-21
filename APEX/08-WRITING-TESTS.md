@@ -1,6 +1,6 @@
 # Writing Tests
 
-Writing tests should be a collaborative process between the Developer and the Code Reviewers.
+Writing tests should be more than just reaching the 75% code coverage. We have to make sure that we are testing what our methods is suppose to be doing. The patterns below will guide us in achieving that.
 
 <br>
 
