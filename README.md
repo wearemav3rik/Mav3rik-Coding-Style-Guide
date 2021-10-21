@@ -20,3 +20,13 @@
   - [Accessing Record Types](APEX/07-ACCESSING-RECORD-TYPES.md)
   - [Writing Tests](APEX/08-WRITING-TESTS.md)
   - [Apex Docs and Commenting](APEX/09-APEX-DOCS-AND-COMMENTING.md)
+
+- JavaScript
+  - Tabs or Spaces
+  - Naming Convention
+  - Use of var, let or cont
+  - Optional Chaining
+  - Exception Handling
+
+- GIT
+  - Merge vs Rebase
