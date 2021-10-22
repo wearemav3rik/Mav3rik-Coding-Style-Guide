@@ -1,5 +1,5 @@
 # Tabs or Spaces
-Tabs or Spaces have always been the question among developers. The answer to the question is to use `spaces`, 2 spaces to be particular. Ideally, we want to configure our tab keybinding to create `2 spaces`.
+Tabs or Spaces have always been the question among developers. The answer to the question is to use `spaces`, 4 spaces to be particular. Ideally, we want to configure our tab keybinding to create `4 spaces`.
 
 <br>
 
