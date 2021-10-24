@@ -1,16 +1,34 @@
 # Tabs or Spaces
-Tabs or Spaces have always been the question among developers. The answer to the question is to use `spaces`, 4 spaces to be particular. Ideally, we want to configure our tab keybinding to create `4 spaces`.
+## 4 Spaces
+We will be using `4 spaces` to maximise readability of our code. Ideally, we want to configure our tab keybinding to type 4 spaces.
 
 <br>
 
-## Apex PMD
-The team should be using `Apex PMD` to format the code on each Apex class.
+## Max Line Length
+For each line of our code the maximum is `120 spaces`.
 
-Apex PMD uses `4 spaces` for `1 tab` in its configuration.
+This will prevent too much horizontal scrolling when reading through each other's code.
 
 <br>
 
-## VS Code
+## Editor Config
+We can manually override the `.editorconfig` file for VSCode and IntelliJ.
+To do so, create the following file in your project's root directory. As of writing, IlluminatedCloud is preventing this override.
+```
+[{*.apex,*.cls,*.soql,*.trigger}]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = false
+max_line_length = 120
+tab_width = 4
+```
+
+<br>
+
+## Hotkeys
+### VS Code + Apex PMD Plugin
 
 For VS Code users, the hotkey is `Ctrl + Shift + F` while on the Apex class file.
 
@@ -18,7 +36,7 @@ Another method is to `Cmd + Shift + P` and choose `Format Document`.
 
 <br>
 
-## IntelliJ
+### IntelliJ + IlluminatedCloud
 
 For IntelliJ, the hotkey is `Cmd + Option + L` while on the Apex class file.
 
