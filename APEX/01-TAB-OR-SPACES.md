@@ -4,7 +4,7 @@ We will be using `4 spaces` to maximise readability of our code. Ideally, we wan
 
 <br>
 
-## Max Line Length
+## Max Spaces per Line
 For each line of our code the maximum is `120 spaces`.
 
 This will prevent too much horizontal scrolling when reading through each other's code.
