@@ -86,6 +86,7 @@ This method verifies permissions using DescribeSObjectResult and DescribeFieldRe
 Before performing any DML operation, call any of these methods `isAccessible`, `isCreateable`, or `isUpdateable` to verify if the user has required access. This option is CPU intensive.
 
 Example:
+### Read Access
 ```java
 // The following example verifies if the user has read access to specific objects and fields.
 public static Boolean hasReadAccess(String sObjectName, Set<String> sFields){
@@ -107,7 +108,9 @@ public static Boolean hasFieldReadAccess(String sObjectName, Set<String> sFields
     }
     return true;
 }
-
+```
+### Create Access
+```java
 // The following example verifies if the user has create access to specific objects and fields.
 public static Boolean hasCreateAccess(String sObjectName, Set<String> sFields){
     if(Schema.sObjectType.Case.isCreateable()){
@@ -128,7 +131,9 @@ public static Boolean hasFieldCreateAccess(String sObjectName, Set<String> sFiel
     }
     return true;
 }
-
+```
+### Update Access
+```java
 // The following example verifies if the user has update access to specific objects and fields.
 public static Boolean hasUpdateAccess(String sObjectName, Set<String> sFields){
     if(Schema.sObjectType.Case.isUpdateable()){
@@ -168,6 +173,7 @@ Salesforce recommends using this method to verify user access.
   - `UPSERTABLE`
 
 Example:
+### Read stripInaccessible
 ```java
 // The following example will strips all the records from recordset before returning the list.
 public static void queryWithStripInaccessible(List<Account> accountsList){
@@ -181,6 +187,9 @@ public static void queryWithStripInaccessible(List<Account> accountsList){
         new LogException().log(ex);
     }
 }
+```
+### Create stripInaccessible
+```java
 // The following example will strips all the records from recordset before creation.
 public static void createWithStripInaccessible(List<Account> accountsList){
     try{
@@ -193,6 +202,9 @@ public static void createWithStripInaccessible(List<Account> accountsList){
         new LogException().log(ex);
     }
 }
+```
+### Update stripInaccessible
+```java
 // The following example will strips all the records from recordset before update.
 public static void updateWithStripInaccessible(List<Account> accountsList){
     try{
@@ -205,7 +217,9 @@ public static void updateWithStripInaccessible(List<Account> accountsList){
         new LogException().log(ex);
     }
 }
-
+```
+### Upsert stripInaccessible
+```java
 // The following example will strips all the records from recordset before upsert operation.
 public static void upsertWithStripInaccessible(List<Account> accountsList){
     try{
