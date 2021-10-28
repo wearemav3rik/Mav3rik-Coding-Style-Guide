@@ -1,6 +1,5 @@
 # Accessing Record Types
-
-To access record type IDs without using SOQL queries, we will use the following syntax:
+We like to access our record types without the need for extra queries.
 
 <br>
 

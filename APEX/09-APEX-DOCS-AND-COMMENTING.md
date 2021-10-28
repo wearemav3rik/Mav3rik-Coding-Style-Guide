@@ -1,5 +1,9 @@
 # Apex Docs and Commenting
+Our code will always be ready to generate Apex Docs. Comments also help us track changes.
 
+<br>
+
+## Learn about Apex Docs
 We will be using the conventions set by ApexDocs so we can generate them as needed. To learn more about ApexDocs, visit [SalesforceFoundation/ApexDoc](https://github.com/SalesforceFoundation/ApexDoc).
 
 <br>

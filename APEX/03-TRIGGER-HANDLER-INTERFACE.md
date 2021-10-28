@@ -1,4 +1,5 @@
 # Trigger Handler Interface
+The trigger handler interface we use to maximise trigger performance and provide uniformity across trigger patterns.
 
 ## Which Trigger Handler Interface?
 We will use the following Trigger interface for our projects:
