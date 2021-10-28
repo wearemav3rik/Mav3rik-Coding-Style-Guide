@@ -4,7 +4,7 @@
 1. Naming our classes should be in `Pascal Case`.
 2. It should also begin with an `Upper case` character.
 3. Special characters should be avoided such as Dash `-` or Underscore `_`.
-
+4. The maximum length is `40 characters`.
 ```
 Examples:
 
@@ -31,8 +31,8 @@ contactupdatebatch
 <br>
 
 ## Class Methods
-1. Naming our classes should be in `Camel Case`.
-2. It should also begin with an `Lower Case` character.
+1. Naming our class methods should be in `Camel Case`.
+2. It should also begin with a `Lower Case` character.
 3. Special characters should be avoided such as Dash `-` or Underscore `_`.
 
 ```
@@ -58,8 +58,8 @@ findAllAccountsW/Activities
 <br>
 
 ## Mutable Variables (Non-Final)
-1. Naming our final variables should be in `Camel Case`.
-2. It should also begin with an `Lower Case` character.
+1. Naming our mutable variables should be in `Camel Case`.
+2. It should also begin with a `Lower Case` character.
 3. Special characters should be avoided such as Dash `-` or Underscore `_`.
 4. Avoid single letter variable names.
 ```
@@ -94,8 +94,9 @@ for (List<Account> a : accounts) {}
 <br>
 
 ## Immutable Variables (Final)
-1. Naming our non-final variables should be in `Snake Case`.
+1. Naming our immutable variables should be in `Snake Case`.
 2. It should also be `All Upper Case` characters.
+3. Avoid single letter variable names.
 ```
 Examples:
 
@@ -112,4 +113,6 @@ final Integer batchLimit = 50;
 final Integer BatchLimit = 50;
 final Boolean ENABLELOG_EXCEPTION = true;
 final Boolean enable_log_exce[topm] = true;
+final A = 1;
+final B = true;
 ```

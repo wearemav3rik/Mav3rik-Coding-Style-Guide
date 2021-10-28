@@ -1,6 +1,5 @@
-# Writing Tests
-
-Writing tests should be more than just reaching the 75% code coverage. We have to make sure that we are testing what our methods is suppose to be doing. The patterns below will guide us in achieving that.
+# Writing Unit Tests
+Writing tests is not just about Code Coverage. We want to adapt a test driven mindset and be able to ship our code with confidence. Our patterns ensure that we have considered both positive and negative scenarios of a feature.
 
 <br>
 

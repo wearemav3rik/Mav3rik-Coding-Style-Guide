@@ -1,9 +1,12 @@
 # Apex Security Pattern
+Learn about the security patterns we use to ensure we are adhering to the Sharing Model and Field Level Security.
 
 ## Enforcing Row Level Security
-To enforce row level security on objects within Apex classes, we need to query Objects inside the scope of an Apex class. Row level security should always be enforced on an apex class.
+To enforce row level security on objects within Apex classes, we first need to know if the Apex class is querying any Objects. If our Apex Class is performing a query, Row level security should always be enforced.
 
-Apex classes without queries do not need row level security.
+Apex classes such as utility classes which do not perform queries do not need row level security.
+
+
 
 ### Wrong
 ```java
@@ -213,7 +216,7 @@ public static void updateWithStripInaccessible(List<Account> accountsList){
             update accountsList;
         }
     }
-    Catch (DMLException ex){
+    catch (DMLException ex){
         new LogException().log(ex);
     }
 }

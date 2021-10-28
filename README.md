@@ -26,6 +26,7 @@
   - Naming Convention
   - Use of var, let or const
   - Optional Chaining
+  - Nullish Coalescing
   - Exception Handling
 
 - GIT
