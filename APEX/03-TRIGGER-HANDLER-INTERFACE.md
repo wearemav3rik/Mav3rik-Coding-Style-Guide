@@ -24,11 +24,27 @@ public with sharing class ExampleTriggerHandler extends TriggerHandler {
 	public ExampleTriggerHandler() {
 		this.newMap 	= (Map<Id, Example__c>) Trigger.newMap;
 		this.oldMap 	= (Map<Id, Example__c>) Trigger.oldMap;
-		this.news		= (List<Example__c>) Trigger.new;
-		this.olds		= (List<Example__c>) Trigger.old;
+		this.news	= (List<Example__c>) Trigger.new;
+		this.olds	= (List<Example__c>) Trigger.old;
 	}
 
-	public static void yourMethod() {
+	public override void beforeInsert() {
+		// your code here
+	}
+	
+	public override void beforeUpdate() {
+		// your code here
+	}
+
+	public override void beforeDelete() {
+		// your code here
+	}
+
+	public override void afterInsert() {
+		// your code here
+	}
+
+	public override void afterUpdate() {
 		// your code here
 	}
 }
